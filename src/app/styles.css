@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
+
+body {
+    background-color: var(--secondary-color);
+    margin: 0;
+    font-family: 'DM Serif Display', serif;
+    color: var(--secondary-color);
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 50px;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+#moon-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+    position: absolute;
+}
+
+.top-image {
+    top: -100%;
+}
+
+.bottom-image {
+    top: 100%;
+}
+
+@keyframes show-image {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.top-image {
+    /*animation: show-image 1s ease-in-out forwards;*/
+
+}
+
+@keyframes show-image-bottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.bottom-image {
+    /*animation: show-image-bottom 1s ease-in-out forwards;*/
+    mix-blend-mode: lighten;
+
+}
