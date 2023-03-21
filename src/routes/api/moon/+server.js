@@ -11,7 +11,6 @@ export const GET = async ({request, url}) => {
     date = new Date(date);
     const moon = await getMoonImage(date);
 
-    console.log(moon);
 
     return new Response(JSON.stringify(moon), {status: 200});
 }
