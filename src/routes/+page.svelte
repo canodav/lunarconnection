@@ -50,7 +50,7 @@
     }
 
     input::-webkit-calendar-picker-indicator {
-        display: none;
+        filter: invert(1);
     }
 
     button {

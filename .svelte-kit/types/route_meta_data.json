@@ -1,4 +1,9 @@
 {
 	"/": [],
-	"/results": []
+	"/api/moon": [
+		"src/routes/api/moon/+server.js"
+	],
+	"/results": [
+		"src/routes/results/+page.js"
+	]
 }
