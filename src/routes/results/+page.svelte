@@ -1,8 +1,9 @@
 <script>
+    import Header from '../../components/header.svelte';
     // get parameters from url
     import { page } from '$app/stores';
     import { getMoonImage } from './moon';
-    
+
     const date1 = $page.url.searchParams.get('date1');
     const date2 = $page.url.searchParams.get('date2');
     var moon1 = '';
@@ -26,11 +27,28 @@
     
 </script>
 
-<main id="page-container">
-    <h1>LunarConnection</h1>
+<Header />
+<main id="page-content">
+    <p>{date1}</p>
     <div id="moon-container">
-      <img src={moon1} alt="moon1" class="top-image" />
-      <img src={moon2} alt="moon2" class="bottom-image" />
+        
+      <img src={moon1} alt="moon1 {moon1}" class="top-image" />
+      <img src={moon2} alt="moon2 {moon2}" class="bottom-image" />
+    </div>
+    <p>{date2}</p>
+    <div id="dates">
+
+
     </div>
     
 </main>
+<footer>
+    @2023 LunarConnection 
+</footer>
+
+<style>
+    img{
+        width: 100%;
+        
+    }
+</style>

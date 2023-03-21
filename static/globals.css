@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 :root {
-    --primary-color: #fff;
-    --secondary-color: #000;
+    --primary-color: #fcfbfc;
+    --secondary-color: #111;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 html{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -15,29 +22,57 @@ body {
     background-color: var(--secondary-color);
     margin: 0;
     font-family: 'DM Serif Display', serif;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 400;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+body > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
-#page-container {
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    z-index: 9;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    z-index: 9;
+}
+
+#page-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     padding: 0 2rem;
+    width: min(100%, 480px);
 
+    height: 100%;
 }
 
 h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--primary-color);
     margin: 0;
     line-height: 1;
@@ -48,44 +83,32 @@ h1 {
     text-align: center;
 }
 
-input{
-    border: none;
-    outline: none;
-    border-bottom: 1px solid var(--primary-color);
-    background-color: transparent;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    font-family: 'DM Serif Display', serif;
-    font-weight: 400;
-    margin-bottom: 2rem;
-    width: 80%;
-    text-align: center;
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     z-index: 9;
 }
 
-input::-webkit-calendar-picker-indicator {
-    display: none;
-}
 
-button {
-    border: none;
-    outline: none;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+a{
+    color: var(--primary-color);
+    text-decoration: none;
     font-size: 1rem;
     font-family: 'DM Serif Display', serif;
     font-weight: 400;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
     z-index: 9;
-
-    cursor: pointer;
 }
 
 #moon-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1.2962962963;
+
+    margin: auto;
 }
 
 img {

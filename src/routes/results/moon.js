@@ -34,6 +34,7 @@ export function getMoonImage(date){
 		'Luna29.png',
 		'Luna27.png',
 		'Luna28.png',
+		'Luna29.png',
 	];
 
 
@@ -44,7 +45,7 @@ export function getMoonImage(date){
 	const phase = Math.round(moonIllumination.phase * 29.5);
 
 	// Obtén la imagen correspondiente a la fase lunar
-	const moonImage = images[phase + 1];
+	const moonImage = images[phase];
 
     return moonImage;
 }
