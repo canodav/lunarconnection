@@ -9,7 +9,7 @@ export const GET = async ({request, url}) => {
     }   
 
     date = new Date(date);
-    const moon = await getMoonImage(date);
+    const moon = getMoonImage(date);
 
 
     return new Response(JSON.stringify(moon), {status: 200});
@@ -18,7 +18,7 @@ export const GET = async ({request, url}) => {
 
 
 // @ts-ignore
-async function getMoonImage(date){
+function getMoonImage(date){
 	const images = [
 		'Luna1.png',
 		'Luna2.png',
