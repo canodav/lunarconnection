@@ -1,5 +1,5 @@
 
-import * as SunCalc from 'suncalc';
+import SunCalc from 'suncalc';
 export const GET = async ({request, url}) => {
 
     let date = url.searchParams.get('date');

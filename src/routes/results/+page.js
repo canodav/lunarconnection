@@ -1,5 +1,4 @@
 
-import * as SunCalc from 'suncalc';
 
 export async function load ({url}) {
 
